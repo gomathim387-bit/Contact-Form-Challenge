@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercotent.com/Gomathim387-bit/Contact-Form-Challenge/main/assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function () {
+  emailjs.init("NPWjUn3mKRemBUG5N"); // EmailJS → Account → Public Key
+})();
+</script>
+<script src="script.js" defer></script>
+  
+  <title>Contact form</title>
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+<body>
+  <form class="container" id="contactForm" novalidate>
+    <div class="box">
+      <div class="start">
+        <h1>Contact Us</h1>
+      </div>  
+      <div class="form">
+        <div class="F1">
+          <label for="fname">First Name</label><br>
+          <input id="fname" class="box1" data-error="first" type="text" autocomplete="given-name" name="fname" pattern="[A-Za-z]{3,}" required>
+          <span class="error-message" id="first">This field is required</span>   
+        </div>
+        
+        <div class="F2">
+          <label for="lname">Last Name</label><br>
+          <input id="lname" class="box2" data-error="last" type="text" autocomplete="family-name" name="lname" pattern="[A-Za-z]{1,}"  required><br>
+          <span class="error-message" id="last">This field is required</span>   
+
+        </div>
+      </div>
+      <div class="f3">
+        <label for="Email">Email</label><br>
+        <input class="email"  data-error="emails"  type="email" id="Email" name="to_email" autocomplete="email" required><br>
+        <span class="error-message" id="emails">Please enter a valid email address</span>   
+ 
+      </div>
+      <div class="F4">
+        <label for="general">Query</label><br>
+      </div>
+      <div class="Form2">
+        <label class="F5">
+          <input type="radio" name="opt" value="query" id= "general" class="radio">
+          <span  class="first" >General Enquiry</span>
+        </label>
+
+        <label class="F6">
+          <input type="radio" name="opt" value="Support" id="Request">
+          <span  class="first" >Support Request</span>
+        </label>
+        <span class="error-message" id="status" >Please select a query type</span> 
+      </div>
+
+      <div class="F7">
+        <label for="Msg">Message</label><br>
+        <textarea class="ms" data-error="msgs" id="Msg" name="message" type="text" autocomplete="off" minlength="5" maxlength="200" required></textarea><br>
+        <span class="error-message" id="msgs">This field is required</span>   
+
+      </div>
+      <div class="F8">
+        <input type="checkbox" id="agree" name="check" data-error="check" >
+        <span for="agree" class="last" id="check">I constent to being contacted by the team</span><br>
+        <span  class="error-message" id="checkErr" >To submit this form,please consent to being conected</span>
+      </div>  
+      <button type="submit" id="submitbtn">Submit</button>
+    </div>
+  
+  </form>
+  <div id="toast" class="toast">
+    <div class="final">
+    <span class="success-icon">&#10004;</span>
+    <strong> Message Sent!</strong>
+    </div>
+    <p class="toast-show">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+
+</body>
+</head>
