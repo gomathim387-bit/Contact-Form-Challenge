@@ -20,7 +20,7 @@ body {
     border-radius: 9px;
     padding:10px;
     box-sizing: border-box;
-    margin-top:10% ;
+    margin-top:1% ;
 }
 
 h1 {
@@ -134,7 +134,7 @@ h1 {
 
 @media screen and (max-width: 600px) {
     .box {
-        width: 88% !important; 
+        width: 90% !important; 
         max-width: 340px;
         margin: 20px auto;
         padding: 20px !important;
@@ -212,6 +212,11 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .last{
+        margin-top: 3px;
+        font-size: 12px ;
     }
 }
 .F6 {
